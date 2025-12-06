@@ -17,9 +17,9 @@ resource "aws_bedrock_inference_profile" "example" {
   name        = var.inference_profile_name
   description = var.inference_profile_description
 
-  # Claude Sonnet 4.5のモデルARNを指定
+  # Claude Sonnet 4.5のJP推論プロファイルARNを指定（クロスリージョン）
   model_source {
-    copy_from = "arn:aws:bedrock:ap-northeast-1::foundation-model/anthropic.claude-sonnet-4-5-20250929-v1:0"
+    copy_from = "arn:aws:bedrock:ap-northeast-1:243180185940:inference-profile/jp.anthropic.claude-sonnet-4-5-20250929-v1:0"
   }
 
   tags = var.tags
