@@ -1,0 +1,16 @@
+# AWS設定
+aws_region = "ap-northeast-1"
+
+# コピー元の推論プロファイルARN（<ACCOUNT_ID> は自分のAWSアカウントIDに置換）
+source_inference_profile_arn = "arn:aws:bedrock:ap-northeast-1:<ACCOUNT_ID>:inference-profile/jp.anthropic.claude-sonnet-4-5-20250929-v1:0"
+
+# 推論プロファイル設定
+inference_profile_name        = "my-bedrock-inference-profile"
+inference_profile_description = "Application inference profile for AWS Bedrock with Claude Sonnet 4.5"
+
+# タグ
+tags = {
+  Environment = "production"
+  ManagedBy   = "terraform"
+  Project     = "bedrock-inference"
+}
